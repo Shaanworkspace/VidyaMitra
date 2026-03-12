@@ -63,14 +63,18 @@ async def log_requests(request: Request, call_next):
 
 
 # Configure CORS
+allowed_origins = [
+    settings.frontend_url,
+    "http://localhost:3000",
+    "http://localhost:3002",
+    "http://127.0.0.1:3002",
+]
+# Add production Vercel origins
+allowed_origins.extend(settings.cors_origins)
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        settings.frontend_url,
-        "http://localhost:3000",
-        "http://localhost:3002",
-        "http://127.0.0.1:3002",
-    ],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
