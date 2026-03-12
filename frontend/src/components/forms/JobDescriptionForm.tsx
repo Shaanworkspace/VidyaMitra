@@ -12,28 +12,34 @@ export const JobDescriptionForm = ({
   disabled = false,
 }: JobDescriptionFormProps) => {
   return (
-    <div className="space-y-4">
-      <div>
-        <label
-          htmlFor="job-description"
-          className="block text-sm font-medium text-gray-700 mb-2"
-        >
+    <div className="space-y-3">
+      <div className="flex items-center gap-2">
+        <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-purple-100 text-purple-700 text-sm font-bold">
+          2
+        </span>
+        <label htmlFor="job-description" className="text-base font-semibold text-slate-800">
           Job Description
         </label>
-        <textarea
-          id="job-description"
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          disabled={disabled}
-          className="w-full h-64 p-4 border-2 border-gray-300 rounded-lg resize-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors disabled:opacity-50 disabled:bg-gray-50"
-          placeholder="Paste the job description here..."
-        />
       </div>
 
-      <div className="flex items-center space-x-2">
-        <span className="text-xs text-gray-500">
-          💡 Include requirements, responsibilities, and preferred
-          qualifications for best results
+      <textarea
+        id="job-description"
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        disabled={disabled}
+        style={{ color: '#1e293b', backgroundColor: '#ffffff' }}
+        className="w-full h-64 p-4 rounded-xl border-2 border-slate-200 hover:border-purple-300 resize-none focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all disabled:opacity-50 disabled:cursor-not-allowed text-sm leading-relaxed"
+        placeholder="Paste the job description here...
+
+Include requirements, responsibilities, and qualifications for best results."
+      />
+
+      <div className="flex items-center justify-between">
+        <span className="text-xs text-slate-500">
+          💡 Include all skills and requirements from the job posting
+        </span>
+        <span className="text-xs text-slate-400">
+          {value.length > 0 ? `${value.length} characters` : ""}
         </span>
       </div>
     </div>
