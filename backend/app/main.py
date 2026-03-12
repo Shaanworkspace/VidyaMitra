@@ -62,15 +62,25 @@ async def log_requests(request: Request, call_next):
     return response
 
 
-# Configure CORS
+# Configure CORS - hardcoded allowed origins
 allowed_origins = [
-    settings.frontend_url,
+    # Production Vercel frontends
+    "https://vidya-mitra-beta.vercel.app",
+    "https://vidyamitra.vercel.app",
+    # Any future *.vercel.app preview deployments for this project
+    "https://vidya-mitra.vercel.app",
+    # Local development
     "http://localhost:3000",
+    "http://localhost:3001",
     "http://localhost:3002",
+    "http://127.0.0.1:3000",
     "http://127.0.0.1:3002",
 ]
-# Add production Vercel origins
-allowed_origins.extend(settings.cors_origins)
+# Also include anything from env (CORS_ORIGINS) for flexibility
+try:
+    allowed_origins.extend(settings.cors_origins)
+except Exception:
+    pass
 
 app.add_middleware(
     CORSMiddleware,
