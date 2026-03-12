@@ -1,0 +1,44 @@
+{
+  "name": "vidyamitra-career-agent",
+  "version": "1.0.0",
+  "description": "VidyaMitra - AI-Powered Resume Evaluator, Trainer & Career Planner with FastAPI backend and Next.js frontend",
+  "scripts": {
+    "dev": "concurrently \"cd backend && bash -c 'source .venv/bin/activate && uvicorn app.main:app --reload --port 8002'\" \"cd frontend && PORT=3002 npm run dev\"",
+    "dev:clean": "./scripts/kill-ports.sh && npm run dev",
+    "kill": "./scripts/kill-ports.sh",
+    "build": "cd frontend && npm run build",
+    "start": "cd frontend && npm run start",
+    "lint": "npm run lint:frontend && npm run lint:backend",
+    "lint:frontend": "cd frontend && npm run lint",
+    "lint:backend": "cd backend && bash -c 'source .venv/bin/activate && flake8 .'",
+    "format": "npm run format:frontend && npm run format:backend",
+    "format:frontend": "cd frontend && npx prettier --write .",
+    "format:backend": "cd backend && bash -c 'source .venv/bin/activate && black .'",
+    "test": "npm run test:backend && npm run test:frontend",
+    "test:backend": "cd backend && bash -c 'source .venv/bin/activate && pytest'",
+    "test:frontend": "cd frontend && npm run test",
+    "test:coverage": "npm run test:backend && cd frontend && npm run test:coverage",
+    "setup": "./scripts/setup.sh",
+    "validate": "./scripts/validate-env.sh",
+    "logs": "tail -f backend/app-logs/app.log",
+    "logs:clear": "rm -f backend/app-logs/*.log && echo 'Application logs cleared'"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "ai",
+    "resume-evaluator",
+    "career-planner",
+    "fastapi",
+    "nextjs",
+    "langchain",
+    "openai"
+  ],
+  "author": {
+    "name": "Shaan Yadav",
+    "email": "shaanyadav1012004@gmail.com"
+  },
+  "license": "MIT",
+  "private": true
+}

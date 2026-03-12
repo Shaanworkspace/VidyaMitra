@@ -1,0 +1,37 @@
+John Doe
+Email: john.doe@email.com | Phone: (555) 123-4567 | LinkedIn: linkedin.com/in/johndoe
+Location: San Francisco, CA
+
+PROFESSIONAL SUMMARY
+Experienced software engineer with 5+ years developing scalable web applications and data pipelines. Strong background in Python, cloud technologies, and agile methodologies.
+
+TECHNICAL SKILLS
+Languages: Python, JavaScript, SQL, Java
+Frameworks: Django, Flask, React, Node.js
+Databases: PostgreSQL, MongoDB, Redis
+Cloud: AWS (EC2, S3, Lambda), Docker, Kubernetes
+Tools: Git, Jenkins, JIRA, Datadog
+
+PROFESSIONAL EXPERIENCE
+
+Senior Software Engineer | TechCorp Inc. | Jan 2021 - Present
+• Led development of microservices architecture serving 1M+ daily users
+• Implemented CI/CD pipelines reducing deployment time by 60%
+• Mentored team of 4 junior developers on best practices
+• Optimized database queries improving response time by 40%
+
+Software Engineer | StartupXYZ | Jun 2018 - Dec 2020
+• Built RESTful APIs using Django REST Framework
+• Developed real-time data processing pipeline using Apache Kafka
+• Collaborated with cross-functional teams in agile environment
+• Reduced server costs by 30% through code optimization
+
+Junior Developer | WebSolutions | May 2017 - May 2018
+• Created responsive web applications using React
+• Wrote unit tests achieving 85% code coverage
+• Participated in code reviews and daily standups
+• Fixed bugs and implemented feature requests
+
+EDUCATION
+Bachelor of Science in Computer Science
+University of California, Berkeley | 2013 - 2017

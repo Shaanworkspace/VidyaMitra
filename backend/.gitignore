@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Application logs
+app-logs/
+*.log
+
+# Model cache
+.cache/
+*.pkl
+*.joblib
+
+# OS
+.DS_Store
+Thumbs.db
